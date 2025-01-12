@@ -37,9 +37,10 @@ A simple React-based chat window component that displays messages and automatica
 
 ## Future Enhancements
 
-- Auto-Scrolling Behavior
-- Add support for message timestamps.
-- Improve UI/UX with animations.
+- [ ] Deploy to Vercel
+- [ ] Auto-Scrolling Behavior
+- [ ] Add support for message timestamps.
+- [ ] Improve UI/UX with animations.
 
 ## License
 
