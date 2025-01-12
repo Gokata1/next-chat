@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chat Window
 
-## Getting Started
+A simple React-based chat window component that displays messages and automatically scrolls to the latest message if the user is at the bottom.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Displays chat messages dynamically.
+- Differentiates between user and sender messages.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- React.js
+- TypeScript (optional)
+- Tailwind CSS (for styling)
+- Socket.io for sending and recieving messages
+- ts-node for running nextjs server
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+   ```sh
+   git clone https://github.com/Gokata1/next-chat.git
+   cd next-chat
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```sh
+   npm install  # or yarn install
+   ```
 
-## Deploy on Vercel
+3. Start the development server:
+   ```sh
+   npm run dev:socket  # or yarn start
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Future Enhancements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Auto-Scrolling Behavior
+- Add support for message timestamps.
+- Implement real-time message updates using WebSockets.
+- Improve UI/UX with animations.
+
+## License
+
+This project is licensed under the MIT License. Feel free to use and modify it!
+
+## Contributing
+
+Pull requests are welcome! If you have any improvements or bug fixes, feel free to open an issue or submit a PR.
+
+## Contact
+
+For any questions, reach out to **shrey1dhyani@gmail.com** or create an issue on the repository.
