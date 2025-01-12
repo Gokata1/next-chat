@@ -8,6 +8,7 @@ export interface JoinRoomInterface {
   setJoined: Dispatch<SetStateAction<boolean>>;
   setUserName: Dispatch<SetStateAction<string>>;
   setRoom: Dispatch<SetStateAction<string>>;
+  onJoin: () => void;
 }
 
 function JoinRoom({
@@ -16,10 +17,16 @@ function JoinRoom({
   setJoined,
   setUserName,
   setRoom,
+  onJoin,
 }: JoinRoomInterface) {
   const handleJoinRoom = (e: React.FormEvent) => {
     e.preventDefault();
-    setJoined(true);
+    if (roomId !== "" && username !== "") {
+      onJoin();
+      setJoined(true);
+    } else {
+      alert("Please enter a valid username and roomid");
+    }
   };
 
   return (

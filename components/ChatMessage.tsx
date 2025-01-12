@@ -4,10 +4,10 @@ import { twMerge } from "tailwind-merge";
 export interface ChatMessageInterface {
   sender: string;
   message: string;
-  isOwnMessgae: boolean;
+  isOwnMessage: boolean;
 }
 
-function ChatMessage({ message, sender, isOwnMessgae }: ChatMessageInterface) {
+function ChatMessage({ message, sender, isOwnMessage }: ChatMessageInterface) {
   const isSystemMessgae = sender === "system";
 
   return (
@@ -16,7 +16,7 @@ function ChatMessage({ message, sender, isOwnMessgae }: ChatMessageInterface) {
         "flex ",
         isSystemMessgae
           ? "justify-center"
-          : isOwnMessgae
+          : isOwnMessage
           ? "justify-end"
           : "justify-start",
         "items-center"
@@ -24,10 +24,10 @@ function ChatMessage({ message, sender, isOwnMessgae }: ChatMessageInterface) {
     >
       <div
         className={twMerge(
-          "max-w-xs px-4 py-3 rounded-lg",
+          "max-w-xs px-3 py-2 rounded-lg",
           isSystemMessgae
-            ? "bg-gray-600 text-black text-center text-xs"
-            : isOwnMessgae
+            ? "bg-gray-300 text-black text-center text-xs"
+            : isOwnMessage
             ? "bg-blue-400 text-white"
             : "bg-white text-black"
         )}

@@ -25,6 +25,10 @@ app.prepare().then(() => {
         .emit("user_joined", `${username} has joind the chat room`);
     });
 
+    socket.on("message", ({ room, username, message }) => {
+      socket.to(room).emit("message", { sender: username, message: message });
+    });
+
     socket.on("disconnect", () => {
       console.log(`> User have disconnected ${socket.id}`);
     });
