@@ -39,7 +39,6 @@ A simple React-based chat window component that displays messages and automatica
 
 - Auto-Scrolling Behavior
 - Add support for message timestamps.
-- Implement real-time message updates using WebSockets.
 - Improve UI/UX with animations.
 
 ## License
